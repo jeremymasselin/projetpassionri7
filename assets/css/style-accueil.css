@@ -1,0 +1,574 @@
+/*----------- ALL ----------*/
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em;
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ArrierePlan {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/assets/img/fond-marron.webp);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  height: auto;
+}
+
+/*----------- DIVERS ----------*/
+
+.ButtonRed {
+  color: rgb(234, 164, 2) !important;
+  background-color: rgba(255, 65, 1, 0.596);
+  border: 1px solid rgb(255, 38, 0);
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.733);
+  font-size: larger;
+  min-width: 230px;
+  padding: 20px 40px;
+  flex-wrap: nowrap;
+}
+
+.ButtonYellow {
+  color: rgb(255, 200, 0) !important;
+  background-color: rgba(255, 65, 1, 0);
+  border: 1px solid gold;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.733);
+  font-size: larger;
+  padding: 20px 40px;
+  min-width: 230px;
+  flex-wrap: nowrap;
+}
+
+/*----------- HEADER ----------*/
+
+header {
+  background-color: #382624;
+  .home-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    .burger img {
+      width: 25px;
+      height: auto;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .menu{
+      display: none;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background-color: #382624;
+      padding: 12px 14px;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    }
+
+    .burger{
+      cursor: pointer;
+    }
+
+    .menu a:hover {
+      font-size: 1.2em;
+    } 
+
+    nav{
+      position: relative;
+    }
+
+    #LogoHeader {
+      width: 40px;
+    }
+    a img {
+      width: 25px;
+    }
+    #menu-toggle:checked ~ .menu {
+      display: flex;
+    }
+  }
+
+  #ButtonAbo{
+    background-color: #AA2309;
+    color: white;
+    font-weight: 700;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+  }
+  #ButtonTry{
+    background-color: #00000022;
+    color: white;
+    font-weight: 700;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 7px;
+  }
+}
+
+/*---------- HERO SECTION --------------*/
+
+#herosection {
+  background-image: url(/assets/img/MidnightMobilesm.avif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130vh;
+  width: 100%;
+}
+
+#HeroSectionVideo {
+  display: none;
+}
+
+#TitleHeroSection {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  padding-top: 360px;
+  h1 {
+    padding: 0px 60px;
+    line-height: 85%;
+  }
+  #imgLogoHero {
+    width: 400px;
+    margin: 0px 20px;
+  }
+}
+
+#HeroSectionBackground {
+  background-image:
+    linear-gradient(rgba(16, 8, 56, 0.6), rgba(0, 0, 0, 99.35)),
+    url(/assets/img/MidnightCinematic_Masthead_1920x1080-2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.HeroSectionText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+#SectionArticleActu {
+  h2 {
+    padding: 30px;
+  }
+}
+
+/*---------- SECTION 2 ACTU --------------*/
+
+#Actualite {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 20px;
+}
+
+.H2SectionActu {
+  padding: 40px;
+}
+
+.ArticleActu {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 40px;
+  background-color: #30231b;
+  img {
+    border: 1px solid #776052;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 1em;
+    color: blanchedalmond;
+  }
+  .ArticleActuText {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 10px 20px;
+    border: 1px solid #776052;
+  }
+}
+
+.ArrierePla {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 50px;
+  background-image: url(/assets/img/fond-marron.webp);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  height: auto;
+  .ButtonRed {
+    font-size: 0.8em;
+    text-align: center;
+  }
+}
+
+/*---------- SECTION 3 --------------*/
+
+/*---------- ARTICLE PREACHETEZ --------------*/
+
+.ArrierePlanSectionValise {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/assets/img/fond-marron.webp);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  height: auto;
+  border-top: 1px solid #776052;
+  border-bottom: 1px solid #776052;
+}
+
+.ArticleValise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0px 20px 20px 20px;
+  gap: 20px;
+  a {
+    font-size: larger;
+  }
+}
+
+.ArticleValise img {
+  width: 100%;
+}
+
+.ArrierePlanSectionValise img {
+  width: 100%;
+}
+/*---------- ARTICLE REDECOUVREZ --------------*/
+
+.ArrierePlanSectionRedecouvrez {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/assets/img/fond-marron.webp);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  height: auto;
+  border-top: 1px solid #776052;
+  border-bottom: 1px solid #776052;
+  padding-bottom: 30px;
+}
+
+.ArticleRedecouvrez {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0px 20px 20px 20px;
+  gap: 20px;
+  .ButtonRed,
+  .ButtonYellow {
+    font-size: larger;
+  }
+}
+
+.ArticleRedecouvrez img {
+  width: 100%;
+}
+
+.ArrierePlanSectionRedecouvrez img {
+  width: 100%;
+}
+
+/*---------- FOOTER --------------*/
+
+/*---------- SECTION SOCIAL --------------*/
+
+footer .ArrierePlan {
+  text-align: center;
+  padding: 20px;
+}
+
+#SocialMediaFooter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+#SocialMediaFooter img {
+  width: 40px;
+}
+
+/*---------- SECTION NAV --------------*/
+
+#Nav-Footer {
+  display: flex;
+  justify-content: center;
+}
+
+#Nav-Footer ul {
+  display: flex;
+  padding: 0;
+  gap: 40px;
+  list-style: none;
+}
+
+#Nav-Footer li {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+#LogoBlizzardFooter {
+  width: 150px;
+  margin-top: 30px;
+}
+
+#LastDivFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#LogoWarningFooter {
+  display: flex;
+  gap: 10px;
+}
+
+/*---------- RESPONSIVE TABLETTE --------------*/
+
+#Actualite {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.ArticleActu {
+  width: 250px;
+  height: auto;
+  margin: 0;
+  h2{
+    font-size: larger;
+  }
+}
+
+/*---------- ARTICLE PREACHETEZ --------------*/
+
+@media screen and (min-width: 768px) {
+  .ArrierePlanSectionValise article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ArrierePlanSectionValise img {
+    width: 80%;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+/*---------- ARTICLE REDECOUVREZ --------------*/
+
+@media screen and (min-width: 768px) {
+  .ArrierePlanSectionRedecouvrez article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ArrierePlanSectionRedecouvrez img {
+    width: 80%;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  /*---------- FOOTER --------------*/
+
+  /*---------- SECTION SOCIAL --------------*/
+
+  footer .ArrierePlan {
+    text-align: center;
+    padding: 40px;
+  }
+}
+
+/*---------- RESPONSIVE DESKOP --------------*/
+
+/*---------- ARTICLE PREACHETEZ --------------*/
+
+@media screen and (min-width: 1025px) {
+
+  /*---------- HEADER --------------*/
+
+  .home-head > nav{
+    order: 2;
+    position: relative;
+    z-index: 10;
+  }
+
+  .home-head > div:nth-of-type(1) {
+    order: 1;
+  }
+
+  .home-head > div:nth-of-type(2) {
+    order: 3;
+  }
+
+  .menu {
+    top: 55px;
+  }
+
+
+
+  #herosection {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #HeroSectionVideo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #HeroSectionVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #TitleHeroSection {
+    position: relative;
+    z-index: 1;
+    height: 30%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #TitleHeroSection {
+    background-image: none;
+  }
+
+  video {
+    display: flex;
+    position: absolute;
+  }
+
+  #Actualite{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ArticleActu {
+    width: 350px;
+  }
+
+  .ArrierePlanSectionValise {
+    background-image: url(/assets/img/image-abonnement-annee-Deskop.avif);
+    background-size: cover;
+  }
+
+  .ArrierePlanSectionValise article {
+    align-items: start;
+  }
+
+  .ArrierePlanSectionValise img {
+    display: none;
+  }
+  .ArticleValise {
+    text-align: start;
+    width: 40%;
+  }
+}
+
+/*---------- ARTICLE REDECOUVREZ --------------*/
+
+@media screen and (min-width: 1025px) {
+  .ArrierePlanSectionRedecouvrez {
+    background-image: url(/assets/img/image-section-redecouvrez-Deskop.avif);
+    background-size: cover;
+  }
+
+  .ArrierePlanSectionRedecouvrez article {
+    align-items: start;
+  }
+
+  .ArrierePlanSectionRedecouvrez img {
+    display: none;
+  }
+  .ArticleRedecouvrez {
+    text-align: start;
+    width: 40%;
+  }
+
+  /*---------- FOOTER --------------*/
+
+  #LastDivFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.366);
+    padding: 20px 5px;
+  }
+}
