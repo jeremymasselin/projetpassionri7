@@ -137,6 +137,7 @@ header {
 .SectionAllianceTitle{
     text-align: center;
     align-content: center;
+    padding: 20px;
 }
 
 .PersoAlliance{
@@ -173,15 +174,29 @@ header {
     padding-top: 15px
 }
 
-
-
-
-
-
 /*--------------------------- RESPONSIVE TABLETTE -----*/
 
 /*----- HEROSECTION -----*/
 
 @media screen and (min-width: 768px) {
+    .PersoAlliance{
+        grid-template-columns: repeat(3, 1fr);
+    }
 
+    .SectionAllianceTitle{
+        padding: 30px 160px;
+    }
+}
+/*--------------------------- RESPONSIVE DESKTOP -----*/
+
+/*----- HEROSECTION -----*/
+
+@media screen and (min-width: 1024px) {
+    .PersoAlliance{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .SectionAllianceTitle{
+        padding: 30px 160px;
+    }
 }
