@@ -125,6 +125,58 @@ header {
     text-shadow: 0 0 12px black;
 }
 
+/*----- SECTION ALLIANCE -----*/
+
+.SectionAlliance{
+    background-color: #0F1524;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SectionAllianceTitle{
+    text-align: center;
+    align-content: center;
+}
+
+.PersoAlliance{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ArticleAlliance{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.ArticleAlliance p{
+    color: gold;
+    text-shadow: 0 0 12px black;
+}
+
+.ImagePerso{
+    width: fit-content;
+    border: 1px solid rgba(61, 61, 195, 0.641);
+    img{
+        width: 200px;
+        height: auto;
+        background-color: #19140f;
+    }
+}
+
+.LogoAlliance{
+    width: 60px;
+    height: auto;
+    padding-top: 15px
+}
+
+
+
+
+
 
 /*--------------------------- RESPONSIVE TABLETTE -----*/
 
