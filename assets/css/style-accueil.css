@@ -2,6 +2,10 @@
 
 body {
   margin: 0;
+  background-image: url(/assets/img/fond-marron.webp);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
 }
 
 h1 {
@@ -11,7 +15,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 2.4em;
   color: white;
 }
 
@@ -140,7 +144,13 @@ header {
 /*---------- HERO SECTION --------------*/
 
 #herosection {
-  background-image: url(/assets/img/MidnightMobilesm.avif);
+    background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 80%,
+      rgba(73, 35, 1, 0.39) 100%
+    ),
+    url(/assets/img/MidnightMobilesm.avif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -151,6 +161,7 @@ header {
 #HeroSectionVideo {
   display: none;
 }
+
 
 #TitleHeroSection {
   display: flex;
@@ -167,8 +178,7 @@ header {
     line-height: 85%;
   }
   #imgLogoHero {
-    width: 400px;
-    margin: 0px 20px;
+    width: 100%;
   }
 }
 
@@ -199,39 +209,52 @@ header {
 
 /*---------- SECTION 2 ACTU --------------*/
 
-#Actualite {
+.SectionActualiteTitle{
+  padding: 40px 5px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.SectionActualiteBlock{
   display: flex;
   flex-direction: column;
-  align-content: center;
+  margin: 20px;
   gap: 20px;
 }
 
-.H2SectionActu {
-  padding: 80px 40px 40px 40px;
-}
-
-.ArticleActu {
+.SectionActualiteArticle{
   display: flex;
   flex-direction: column;
-  margin: 0px 40px;
-  background-color: #30231b;
-  img {
-    border: 1px solid #776052;
+  border: 1px solid rgba(89, 86, 70, 0.539);
+}
+
+.SectionActualiteArticle img{
+  width: 100%;
+  border-bottom: 1px solid rgba(89, 86, 70, 0.539);
+}
+
+.SectionActualiteArticleText{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 5px 20px;
+  justify-content: space-between;
+  h2{
+    font-size: 1.4em;
+    margin-bottom: 60px;
   }
-  h2 {
-    font-size: 1.5em;
-  }
-  p {
+  p{
     font-size: 1em;
-    color: blanchedalmond;
-  }
-  .ArticleActuText {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 30px 10px 20px;
-    border: 1px solid #776052;
+    color: rgba(223, 215, 169, 0.417);
   }
 }
+
+.SectionActualiteButton{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
 
 .ArrierePla {
   display: flex;
@@ -375,9 +398,165 @@ footer .ArrierePlan {
   gap: 10px;
 }
 
-/*---------- RESPONSIVE TABLETTE --------------*/
+/* Smartphones (portrait and landscape) ----------- */
+/*---------- 481px ---> 768px --------------*/
 
-/*---------- SECTION ACTUALITE --------------*/
+@media only screen and (min-device-width : 481px) and (max-device-width : 768px) {
+
+  /*-------------------------HeroSection---*/
+  #TitleHeroSection{
+    padding-top: 350px;
+  }
+
+  #TitleHeroSection {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}  
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  /*-------------------------HeroSection---*/
+  #TitleHeroSection{
+    padding-top: 340px;
+  }
+  
+  .SectionActualiteButton{
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  #TitleHeroSection {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+/*-------------------------HeroActu---*/
+
+  .SectionActualiteBlock{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .SectionActualiteArticle{
+    display: block;
+    height: 100%;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1024px) {
+
+  /*---------- HEADER --------------*/
+
+
+  .home-head{
+    background-color: #30231b;
+  }
+
+  .home-head > nav{
+    order: 2;
+    position: relative;
+    z-index: 10;
+  }
+
+  .home-head > div:nth-of-type(1) {
+    order: 1;
+  }
+
+  .home-head > div:nth-of-type(2) {
+    order: 3;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+
+  /*-------------------------HeroSection---*/
+   #herosection {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #HeroSectionVideo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #HeroSectionVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #TitleHeroSection {
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  #TitleHeroSection {
+    background-image: none;
+  }
+
+  .SectionActualiteButton{
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  #imgLogoHero{
+    margin: 40px 30px;
+    padding: 0px 80px;
+  }
+
+  video {
+    display: flex;
+    position: absolute;
+  }
+
+
+  /*-------------------------SectionActu---*/
+  .SectionActualiteBlock{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .SectionActualiteArticle{
+    display: flex;
+    justify-content: space-between;
+    min-height: 300px;
+  }
+
+  .SectionActualiteArticleText{
+    padding: 20px 10px 5px 10px;
+    justify-content: space-between;
+    h2{
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 0.8em;
+      color: rgba(223, 215, 169, 0.417);
+    }
+  }
+}  
+
+
+/*---------- ANCIEN CSS --------------*/
 
 
 
@@ -434,109 +613,6 @@ footer .ArrierePlan {
     padding: 40px;
   }
 }
-
-/*---------- RESPONSIVE DESKOP --------------*/
-
-/*---------- ARTICLE PREACHETEZ --------------*/
-
-@media screen and (min-width: 1025px) {
-
-  /*---------- HEADER --------------*/
-
-
-  .home-head{
-    background-color: #30231b;
-  }
-
-  .home-head > nav{
-    order: 2;
-    position: relative;
-    z-index: 10;
-  }
-
-  .home-head > div:nth-of-type(1) {
-    order: 1;
-  }
-
-  .home-head > div:nth-of-type(2) {
-    order: 3;
-  }
-
-  .menu {
-    display: flex;
-  }
-
-  #menu-toggle {
-    display: none;
-  }
-
-
-  #herosection {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-  #HeroSectionVideo {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-  }
-
-  #HeroSectionVideo video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  #TitleHeroSection {
-    position: relative;
-    z-index: 1;
-    height: 50%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-  }
-
-  #TitleHeroSection {
-    background-image: none;
-  }
-
-  video {
-    display: flex;
-    position: absolute;
-  }
-
-  #Actualite{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .ArticleActu {
-    width: auto;
-  }
-
-  .ArrierePlanSectionValise {
-    background-image: url(/assets/img/image-abonnement-annee-Deskop.avif);
-    background-size: cover;
-  }
-
-  .ArrierePlanSectionValise article {
-    align-items: start;
-  }
-
-  .ArrierePlanSectionValise img {
-    display: none;
-  }
-  .ArticleValise {
-    text-align: start;
-    width: 40%;
-  }
-}
-
 /*---------- ARTICLE REDECOUVREZ --------------*/
 
 @media screen and (min-width: 1025px) {
